@@ -10,35 +10,29 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var registerViewShown:Bool = false
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \User.name, ascending: true)
+        ],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<User>
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        NavigationStack {
+            VStack {
+                Text("Hello")
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        registerViewShown = true
+                    } label: {
+                        Image(systemName: "plus.circle")
                     }
                 }
             }
-            Text("Select an item")
         }
     }
 

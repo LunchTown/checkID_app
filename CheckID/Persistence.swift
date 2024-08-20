@@ -13,7 +13,7 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
+        for index in 0..<10 {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
         }
@@ -31,7 +31,30 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "CheckID")
+        //create entity
+        let userEntity = NSEntityDescription()
+        userEntity.name = "User"
+        userEntity.managedObjectClassName = "User"
+        
+        let nameAttribute = NSAttributeDescription()
+        nameAttribute.name = "name"
+        nameAttribute.type = .string
+        userEntity.properties.append(nameAttribute)
+        
+        let idAttribute = NSAttributeDescription()
+        idAttribute.name = "id"
+        idAttribute.type = .string
+        userEntity.properties.append(idAttribute)
+        
+        let fileIdAttribute = NSAttributeDescription()
+        fileIdAttribute.name = "fileId"
+        fileIdAttribute.type = .string
+        userEntity.properties.append(fileIdAttribute)
+        
+        let model = NSManagedObjectModel()
+        model.entities = [userEntity]
+        
+        container = NSPersistentContainer(name: "CheckID", managedObjectModel: model)
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

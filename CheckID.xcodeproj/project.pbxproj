@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		748EC6AE2AE50C4800BDE5BE /* UserValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC6AD2AE50C4800BDE5BE /* UserValues.swift */; };
+		748EC6B02AE50CBF00BDE5BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC6AF2AE50CBF00BDE5BE /* User.swift */; };
+		748EC6B22AE5D9A100BDE5BE /* RegisterUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC6B12AE5D9A100BDE5BE /* RegisterUserModel.swift */; };
+		748EC6B42AE676E900BDE5BE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC6B32AE676E900BDE5BE /* RegisterView.swift */; };
 		74A3606E2AE1E34D00DF13C6 /* CheckIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A3606D2AE1E34D00DF13C6 /* CheckIDApp.swift */; };
 		74A360702AE1E34D00DF13C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A3606F2AE1E34D00DF13C6 /* ContentView.swift */; };
 		74A360722AE1E34E00DF13C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74A360712AE1E34E00DF13C6 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		748EC6AD2AE50C4800BDE5BE /* UserValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValues.swift; sourceTree = "<group>"; };
+		748EC6AF2AE50CBF00BDE5BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		748EC6B12AE5D9A100BDE5BE /* RegisterUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserModel.swift; sourceTree = "<group>"; };
+		748EC6B32AE676E900BDE5BE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		74A3606A2AE1E34D00DF13C6 /* CheckID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A3606D2AE1E34D00DF13C6 /* CheckIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIDApp.swift; sourceTree = "<group>"; };
 		74A3606F2AE1E34D00DF13C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +65,10 @@
 			children = (
 				74A3606D2AE1E34D00DF13C6 /* CheckIDApp.swift */,
 				74A3606F2AE1E34D00DF13C6 /* ContentView.swift */,
+				748EC6AD2AE50C4800BDE5BE /* UserValues.swift */,
+				748EC6B12AE5D9A100BDE5BE /* RegisterUserModel.swift */,
+				748EC6AF2AE50CBF00BDE5BE /* User.swift */,
+				748EC6B32AE676E900BDE5BE /* RegisterView.swift */,
 				74A360712AE1E34E00DF13C6 /* Assets.xcassets */,
 				74A360762AE1E34E00DF13C6 /* Persistence.swift */,
 				74A360782AE1E34E00DF13C6 /* CheckID.xcdatamodeld */,
@@ -144,8 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				74A360772AE1E34E00DF13C6 /* Persistence.swift in Sources */,
+				748EC6AE2AE50C4800BDE5BE /* UserValues.swift in Sources */,
+				748EC6B02AE50CBF00BDE5BE /* User.swift in Sources */,
 				74A360702AE1E34D00DF13C6 /* ContentView.swift in Sources */,
 				74A3606E2AE1E34D00DF13C6 /* CheckIDApp.swift in Sources */,
+				748EC6B42AE676E900BDE5BE /* RegisterView.swift in Sources */,
+				748EC6B22AE5D9A100BDE5BE /* RegisterUserModel.swift in Sources */,
 				74A3607A2AE1E34E00DF13C6 /* CheckID.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
